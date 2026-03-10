@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import {
+  Twitter,
+  Youtube,
+  Twitch
+} from "lucide-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +33,63 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <footer className="bg-white border-t border-gray-200 mt-12">
+        <div className="container mx-auto px-4 py-8 max-w-6xl">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold">P</span>
+                </div>
+                <span className="font-semibold text-gray-900">Proger</span>
+              </div>
+              <span className="text-gray-400">|</span>
+              <span className="text-sm text-gray-600">© 2026 Прогер. Все права защищены</span>
+            </div>
+
+            
+            <div className="flex items-center gap-6">
+              <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                О нас
+              </a>
+              <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                Поддержка
+              </a>
+              <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                Блог
+              </a>
+              <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                Вакансии
+              </a>
+            </div>
+
+           
+            <div className="flex items-center gap-4">
+              <a href="#" className="text-sm text-gray-400 hover:text-gray-600 transition-colors">
+                Конфиденциальность
+              </a>
+              <span className="text-gray-300">|</span>
+              <a href="#" className="text-sm text-gray-400 hover:text-gray-600 transition-colors">
+                Условия
+              </a>
+            </div>
+
+          
+            <div className="flex items-center gap-4">
+              <a href="#" className="text-gray-400 hover:text-gray-600 transition-colors">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-gray-600 transition-colors">
+                <Youtube className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-gray-600 transition-colors">
+                <Twitch className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
       </body>
     </html>
   );
